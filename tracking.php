@@ -31,11 +31,11 @@
     /* progress bar horizontal */
     .progress-wrap{ position:relative; margin:45px 0 14px; height:80px; }
     .progress-line{
-      position:absolute; left:6%; right:6%; top:60px; height:15px; background:#eee; border-radius:8px; z-index:1;
+      position:absolute; left:6%; right:6%; top:60px; height:8px; background:#eee; border-radius:8px; z-index:1;
       overflow:hidden;
     }
     .progress-fill{
-      position:absolute; left:1%; top:60px; height:15px; background: linear-gradient(90deg, #F5D7B0, #C79B78); border-radius:8px; z-index:2; transition:width .5s ease;
+      position:absolute; left:1%; top:60px; height:8px; background: linear-gradient(90deg, #F5D7B0, #C79B78); border-radius:8px; z-index:2; transition:width .5s ease;
     }
 
     .steps{
@@ -45,7 +45,7 @@
       width:16%;
       text-align:center;
       position:relative;
-      transform:translateY(-6px);
+      transform:translateY(2px);
     }
     .step .dot{
       width:44px; height:44px; border-radius:50%; margin:0 auto 8px;
@@ -77,14 +77,14 @@
 
   </style>
 </head>
+
 <body>
   <div class="wrap">
     <div class="card-tracking">
       <div class="tracking-title">
-        <h4>Tracking Pesanan <small class="text-muted">#<span id="orderId">—</span></small></h4>
-        <div class="meta">Estimasi tiba: <strong id="eta">—</strong> &nbsp;|&nbsp; Kurir: <strong>PuddingkuExpress</strong></div>
+        <h4>Tracking Pesanan</h4>
       </div>
-
+      
       <div class="progress-wrap">
         <div class="progress-line"></div>
         <div class="progress-fill" id="progressFill" style="width:0%"></div>
