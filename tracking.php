@@ -29,18 +29,44 @@
     .tracking-title .meta{ color:#7b5b45; font-size:.95rem; }
 
     /* progress bar horizontal */
-    .progress-wrap{ position:relative; margin:45px 0 14px; height:80px; }
-    .progress-line{
-      position:absolute; left:6%; right:6%; top:60px; height:8px; background:#eee; border-radius:8px; z-index:1;
-      overflow:hidden;
-    }
-    .progress-fill{
-      position:absolute; left:1%; top:60px; height:8px; background: linear-gradient(90deg, #F5D7B0, #C79B78); border-radius:8px; z-index:2; transition:width .5s ease;
+    .progress-wrap{
+      position:relative;
+      margin:30px 0 40px; /* beri jarak bawah lebih besar */
+      height:100px;       /* tinggi area tracking */
     }
 
-    .steps{
-      position:relative; display:flex; justify-content:space-between; align-items:flex-start; gap:8px; z-index:3;
+    /* garis tracking berada DI ATAS */
+    .progress-line{
+      position:absolute;
+      left:6%; right:6%;
+      top:20px;          /* geser ke atas */
+      height:8px;
+      background:#eee;
+      border-radius:8px;
+      z-index:1;
     }
+
+    .progress-fill{
+      position:absolute;
+      left:6%;
+      top:20px;          /* sama seperti garis */
+      height:8px;
+      background: linear-gradient(90deg, #F5D7B0, #C79B78);
+      border-radius:8px;
+      z-index:2;
+      transition: width .5s ease;
+    }
+
+    /* ikon + label diturunkan ke bawah garis */
+    .steps{
+      position:absolute;
+      top:45px;          /* geser ke bawah garis */
+      left:0; right:0;
+      display:flex;
+      justify-content:space-between;
+      z-index:3;
+    }
+
     .step{
       width:16%;
       text-align:center;
