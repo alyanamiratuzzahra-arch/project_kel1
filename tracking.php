@@ -32,7 +32,7 @@
     .progress-wrap{
       position:relative;
       margin:30px 0 40px; /* beri jarak bawah lebih besar */
-      height:50px;       /* tinggi area tracking */
+      height:100px;       /* tinggi area tracking */
     }
 
     /* garis tracking berada DI ATAS */
@@ -66,7 +66,7 @@
       justify-content:space-between;
       z-index:3;
     }
-    
+
     .step .dot{
       width:44px; height:44px; border-radius:50%; margin:0 auto 8px;
       display:flex; align-items:center; justify-content:center; font-size:18px;
