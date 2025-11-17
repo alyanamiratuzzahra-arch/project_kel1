@@ -30,7 +30,7 @@
       text-align:center;
       padding:80px 0;
       background:linear-gradient(rgba(255,245,235,0.6), rgba(255,235,220,0.6)),
-                 url('gambar/bg/bg_1 slide.jpg') center/cover no-repeat;
+                 url('img/bg/bg_1 slide.jpg') center/cover no-repeat;
       overflow:hidden;
     }
     .hero::before{
@@ -49,12 +49,12 @@
     /* cards */
     .card{ border:none; border-radius:12px; overflow:hidden; transition:transform .18s, box-shadow .18s; }
     .card:hover{ transform:translateY(-6px); box-shadow:0 8px 20px rgba(0,0,0,0.08); }
-    .card-img-top{ height:160px; object-fit:cover; }
+    .card-img-top{ height:200px width:200px; object-fit:cover; }
 
     /* qty control rapi */
     .qty-control{ display:flex; align-items:center; gap:8px; min-width:110px; justify-content:center; }
     .qty-control button{ width:34px; height:34px; padding:0; display:flex; align-items:center; justify-content:center; }
-    .qty-control span{ min-width:26px; text-align:center; font-weight:600; }
+    .qty-control span{ min-width:26px; text-align:center; font-weight:; }
 
     /* category dropdown */
     .category-toggle{ font-size:22px; cursor:pointer; color:var(--pudding-brown); background:none; border:none; }
@@ -202,52 +202,58 @@
 /* ---------- Data produk (ID unik tiap item) ---------- */
 const products = [
   // brownies
-  {id: '84265', name: 'Brownies Burnt Cheese Cake', price: 15000, category: 'Brownies', img: 'img/brownies/brownie burnt cheese cake.jpg'},
-  {id: '98710', name: 'Browkies', price: 12000, category: 'Brownies', img: 'img/brownies/brownie.jpg'},
+  {id: '15469', name: 'Brownie Burnt Cheese Cake', price: 15000, category: 'Brownies', img: 'img/brownies/brownie burnt cheese cake.jpg'},
+  {id: '76098', name: 'Browkies', price: 12000, category: 'Brownies', img: 'img/brownies/brownie.jpg'},
   {id: '43567', name: 'Brownies Bites', price: 15000, category: 'Brownies', img: 'img/brownies/brownies bites.jpg'},
+
   // cake
-  {id: 'd1', name: 'Blueberry Mouse Cake', price: 15000, category: 'Cake', img: 'img/cake/blueberry mouse.jpg'},
-  {id: '15677', name: 'Choco Mouse Cake', price: 50000, category: 'Cake', img: 'img/cake/chocolate mouse cake.jpg'},
-  {id: '17965', name: 'Cookies & Cream Mouse', price: 15000, category: 'Cake', img: 'img/cake/cookies&cream mouse.jpg'},
-  {id: '17113', name: 'Mango Mouse', price: 15000, category: 'Cake', img: 'img/cake/manggo mouse.jpg'},
-  {id: '19983', name: 'Matcha Mouse Cake', price: 15000, category: 'Cake', img: 'img/cake/matcha mouse cake.jpg'},
-  {id: '21789', name: 'Peach Mouse Cake', price: 15000, category: 'Cake', img: 'img/cake/peach mouse cake.jpg'},
-  {id: '19800', name: 'Chocolate Mouse Cake', price: 15000, category: 'Cake', img: 'img/cake/shoco mouse cake tart.jpg'},
-  {id: '11769', name: 'Strawberry Mouse Cake', price: 15000, category: 'Cake', img: 'img/cake/strawberri mpuse cake.jpg'},
-  {id: '', name: 'Strawberry Petite Cake', price: 15000, category: 'Cake', img: 'img/cake/strawberry petite cake.jpg'},
-  {id: '12126', name: 'Strawberry Short Cake 10cm', price: 50000, category: 'Cake', img: 'img/cake/strawberry short cake.jpg'},
-  {id: '18799', name: 'Taro Mouse Cake', price: 15000, category: 'Cake', img: 'img/cake/taro mouse.jpg'},
-  {id: '19822', name: 'Tiramisu Mouse Cake', price: 15000, category: 'Cake', img: 'img/cake/tiramisu mouse cake.jpg'},
+  {id: '12887', name: 'Blueberry Mouse Cake', price: 15000, category: 'Cake', img: 'img/cake/blueberry mouse.jpg'},
+  {id: '15677', name: 'Choco Mousse Big Cake', price: 50000, category: 'Cake', img: 'img/cake/choco short cake.jpg'},
+  {id: '17965', name: 'Cookies and cream mousse', price: 15000, category: 'Cake', img: 'img/cake/cookies&cream mouse.jpg'},
+  {id: '17113', name: 'Mango mousse', price: 15000, category: 'Cake', img: 'img/cake/mouse cake manggo.jpg'},
+  {id: '19983', name: 'Matcha moussea', price: 15000, category: 'Cake', img: 'img/cake/matcha mouse cake.jpg'},
+  {id: '21789', name: 'Peach mousse', price: 15000, category: 'Cake', img: 'img/cake/peach mouse cake.jpg'},
+  {id: '19800', name: 'Chocolate mousse', price: 15000, category: 'Cake', img: 'img/cake/chocolate mouse cake.jpg'},
+  {id: '11769', name: 'Strawberry mousse', price: 20000, category: 'Cake', img: 'img/cake/strawberri mpuse cake.jpg'},
+  {id: '17569', name: 'Strawberry Petite Cake', price: 15000, category: 'Cake', img: 'img/cake/strawberry petite cake.jpg'},
+  {id: '18799', name: 'Taro mousse', price: 15000, category: 'Cake', img: 'img/cake/taro mouse.jpg'},
+  {id: '19822', name: 'Tiramisu mousse', price: 15000, category: 'Cake', img: 'img/cake/tiramisu mouse cake.jpg'},
+  {id: '19876', name: 'Strawberry cake 10cm', price: 50000, category: 'Cake', img: 'img/cake/strawbery shortcake.jpg'},
+
   // cookies
-  {id: '', name: 'Cookies Chococips', price: 5000, category: 'Cookies', img: 'img/cookies/cookies_chococips.jpg'},
+  {id: '11451', name: 'Cookies Chococips', price: 5000, category: 'Cookies', img: 'img/cookies/cookies_chococips.jpg'},
   {id: '67598', name: 'Cookies Oatmilk', price: 5000, category: 'Cookies', img: 'img/cookies/cookies_oatmilk.jpg'},
   {id: '99451', name: 'Cookies Oreo', price: 5000, category: 'Cookies', img: 'img/cookies/cookies_oreo.jpg'},
-  {id: '87889', name: 'Cookies Chocolate', price: 5000, category: 'Cookies', img: 'img/cookies/coookies_chocolate.jpg'},
-  {id: '87012', name: 'Cookies Redvelvet', price: 5000, category: 'Cookies', img: 'img/cookies/redvelvet.jpg'},
+  {id: '87889', name: 'Cookies chocolate', price: 5000, category: 'Cookies', img: 'img/cookies/coookies_chocolate.jpg'},
+  {id: '87012', name: 'Cookies red velvet', price: 5000, category: 'Cookies', img: 'img/cookies/redvelvet.jpg'},
+
   // dessert
-  {id: '10184', name: 'Banofee', price: 20000, category: 'Dessert', img: 'img/dessert/banafe 2.jpg'},
+  {id: '10184', name: 'Banoffe', price: 20000, category: 'Dessert', img: 'img/dessert/banafe 2.jpg'},
   {id: '10715', name: 'Cheese Cuit Strawberry', price: 20000, category: 'Dessert', img: 'img/dessert/cheese cuit strawberry.jpg'},
-  {id: 'a3', name: 'Dessert Box Keju', price: 20000, category: 'Dessert', img: 'img/dessert/dessert box keju.jpg'},
+  {id: '11980', name: 'Dessert Box Keju', price: 15000, category: 'Dessert', img: 'img/dessert/dessert box keju.jpg'},
   {id: '21503', name: 'Milk Bath Chocolate', price: 20000, category: 'Dessert', img: 'img/dessert/milk bath dessert box chocolate.jpg'},
   {id: '13001', name: 'Milk Bath Keju', price: 20000, category: 'Dessert', img: 'img/dessert/milk bath dessert box.jpg'},
-  {id: '98746', name: 'Milk Bun', price: 20000, category: 'Dessert', img: 'img/dessert/milk bun.jpg'},
-  {id: '19087', name: 'Mille Crepes Chocolate', price: 18000, category: 'Dessert', img: 'img/dessert/mille crepes chocolate.jpg'},
-  {id: '98746', name: 'Mille Crepes Strawberry', price: 18000, category: 'Dessert', img: 'img/dessert/mille crepes strawberry.jpg'},
+  {id: '98456', name: 'Milk Bun', price: 20000, category: 'Dessert', img: 'img/dessert/milk bun.jpg'},
+  {id: '19087', name: 'Mille crepe choco', price: 18000, category: 'Dessert', img: 'img/dessert/mille crepes chocolate.jpg'},
+  {id: '29876', name: 'Mille Crepes Strawberry', price: 18000, category: 'Dessert', img: 'img/dessert/mille crepes strawberry.jpg'},
+  {id: '18796', name: 'death by chocolate', price: 12000, category: 'Dessert', img: 'project_kel1/img/dessert/death by chocolate.jpg'},
+
   // pudding
   {id: '11802', name: 'Jerry Cheese Pudding', price: 10000, category: 'Pudding', img: 'img/pudding/jerry cheese pudding.jpg'},
-  {id: '65489', name: 'Jiggly Pudding Rabbit', price: 10000, category: 'Pudding', img: 'img/pudding/jiggly pudding rabbit.jpg'},
-  {id: '76109', name: 'Rainbow Petite Pudding', price: 12000, category: 'Pudding', img: 'img/pudding/rainbow petite pudding.jpg'},
-  {id: '67221', name: 'Silky Pudding Banana', price: 4000, category: 'Pudding', img: 'img/pudding/silky pudding banana.jpg'},
-  {id: '12987', name: 'Silky Pudding Leci', price: 4000, category: 'Pudding', img: 'img/pudding/silky pudding leci.jpg'},
-  {id: '19765', name: 'Silky Pudding Matcha', price: 4000, category: 'Pudding', img: 'img/pudding/silky pudding matcha.jpg'},
-  {id: '67543', name: 'Silky Pudding Strawberry', price: 4000, category: 'Pudding', img: 'img/pudding/silky pudding strawberry.jpg'},
-  {id: '87241', name: 'Silky Pudding Taro', price: 4000, category: 'Pudding', img: 'img/pudding/silky pudding taro.jpg'},
-  {id: '17490', name: 'Silky Pudding Chocolate', price: 4000, category: 'Pudding', img: 'img/pudding/silky pudding_chocolate.jpg'},
-  {id: '12098', name: 'Silky Pudding Mango', price: 4000, category: 'Pudding', img: 'img/pudding/silky pudding_mango.jpg'},
-  {id: '87651', name: 'Silky Pudding Bubble Gum', price: 4000, category: 'Pudding', img: 'img/pudding/silky pudiing_bubble gum.jpg'},
-  {id: '11789', name: 'Tosuni Jiggly Pudding', price: 45000, category: 'Pudding', img: 'img/pudding/tosuni jiggly  pudding.jpg'},
-  {id: '12785', name: 'Tripple Choco Pudding', price: 8000, category: 'Pudding', img: 'img/pudding/tripple choco pudding cup.jpg'}
+  {id: '18729', name: 'Jiggly pudding rabbit', price: 10000, category: 'Pudding', img: 'img/pudding/jiggly pudding rabbit.jpg'},
+  {id: '76109', name: 'Rainbow petit pudding', price: 12000, category: 'Pudding', img: 'img/pudding/rainbow petite pudding.jpg'},
+  {id: '67221', name: 'Silky pudding banana', price: 4000, category: 'Pudding', img: 'img/pudding/silky pudding banana.jpg'},
+  {id: '12987', name: 'Silky pudding lychee', price: 4000, category: 'Pudding', img: 'img/pudding/silky pudding leci.jpg'},
+  {id: '19765', name: 'Silky pudding matcha', price: 4000, category: 'Pudding', img: 'img/pudding/silky pudding matcha.jpg'},
+  {id: '67542', name: 'Silky pudding strawberry', price: 4000, category: 'Pudding', img: 'img/pudding/silky pudding strawberry.jpg'},
+  {id: '87241', name: 'Silky pudding taro', price: 4000, category: 'Pudding', img: 'img/pudding/silky pudding taro.jpg'},
+  {id: '17490', name: 'Silky pudding chocolate', price: 4000, category: 'Pudding', img: 'img/pudding/silky pudding_chocolate.jpg'},
+  {id: '12098', name: 'Silky pudding mango', price: 4000, category: 'Pudding', img: 'img/pudding/silky pudding_mango.jpg'},
+  {id: '87651', name: 'Silky pudding bubble gum', price: 4000, category: 'Pudding', img: 'img/pudding/silky pudiing_bubble gum.jpg'},
+  {id: '11789', name: 'Tosuni jiggly pudding', price: 13000, category: 'Pudding', img: 'img/pudding/tosuni jiggly  pudding.jpg'},
+  {id: '12785', name: 'Triple choco pudding', price: 8000, category: 'Pudding', img: 'img/pudding/tripple choco pudding cup.jpg'}
 ];
+
 /* ---------- Helper ---------- */
 const formatRupiah = n => 'Rp' + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 let cart = JSON.parse(localStorage.getItem('umkm_cart') || '{}');
@@ -358,65 +364,55 @@ document.addEventListener('DOMContentLoaded', ()=>{
   });
 
   /* Track button open tracking.html */
-  document.getElementById('trackOrderBtn').addEventListener('click', ()=> {
-    window.location.href = 'tracking.php';
-  });
-
-  /* Checkout submit */
-  document.getElementById('checkoutForm').addEventListener('submit', async (e)=>{
+ document.getElementById('checkoutForm').addEventListener('submit', async (e) => {
   e.preventDefault();
 
-  const customer = document.getElementById('customerName').value;
-  const address  = document.getElementById('address').value;
-  const phone    = document.getElementById('phone').value;
+  const customer = document.getElementById('customerName').value.trim();
+  const address  = document.getElementById('address').value.trim();
+  const phone    = document.getElementById('phone').value.trim();
   const payment  = document.getElementById('paymentMethod').value;
   const items    = cartItemsDetailed();
 
-  if(items.length === 0) {
-    alert("Keranjang masih kosong!");
-    return;
-  }
+  if (!customer || !phone) { alert("Nama & Telepon wajib diisi!"); return; }
+  if (items.length === 0) { alert("Keranjang masih kosong!"); return; }
 
-  // Simpan ke database (loop semua item)
- for (let item of items) {
-    console.log("DEBUG ITEM:", item);
-  const formData = new FormData();
-
-  // ID produk (pastikan nilainya angka, bukan 'p1' atau 'b2')
-  formData.append("id_produk", item.id);
-
-  // Jumlah produk
-  formData.append("jumlah", item.qty);
-
-  // Bersihkan harga (hapus Rp, titik, dll)
-  const cleanPrice = parseInt(item.price.toString().replace(/\D/g, "")) || 0;
-  formData.append("harga_pembelian", cleanPrice);
+  const orderData = { customer, address, phone, payment, items };
 
   try {
-    const response = await fetch("simpan_pesanan.php", {
-      method: "POST",
-      body: formData,
-    });
-    const result = await response.text();
-    console.log(result);
-
-    // Menampilkan hasil di konsol atau alert
-    alert(result);
-  } catch (error) {
-    console.error("❌ Gagal kirim data:", error);
-    alert("Terjadi kesalahan saat mengirim pesanan!");
-  }
-}
-
-  // Simpan juga data pesanan lokal (tracking)
-  const orderData = { customer, address, phone, payment, items, time: new Date().toISOString() };
-  localStorage.setItem('umkm_last_order', JSON.stringify(orderData));
-  localStorage.setItem('umkm_tracking_step', '0');
-  clearCart();
-  bootstrap.Toast.getOrCreateInstance(document.getElementById('successToast')).show();
-
-  setTimeout(()=>{ window.location.href = 'tracking.php'; }, 1200);
+   const response = await fetch("proses_pesanan.php", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(orderData)
 });
+
+    const result = await response.json();
+    console.log("SERVER:", result);
+
+    if (result.status === "success") {
+      // tampilkan toast
+      const toastEl = document.getElementById('successToast');
+      toastEl.querySelector('.toast-body').innerText = result.msg;
+      bootstrap.Toast.getOrCreateInstance(toastEl).show();
+
+      // simpan tracking
+      localStorage.setItem('umkm_last_order', JSON.stringify({...orderData, time: new Date().toISOString()}));
+      localStorage.setItem('umkm_tracking_step', '0');
+
+      clearCart();
+      setTimeout(()=>{ window.location.href = 'tracking.php'; }, 1200);
+
+    } else {
+      alert(result.msg);
+    }
+
+  } catch (err) {
+    console.error(err);
+    alert("Gagal mengirim data ke server!");
+  }
+});
+
 
 });
 </script>

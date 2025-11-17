@@ -9,12 +9,12 @@
   <meta name="description" content="Demo admin dashboard untuk UMKM Puddingku - daftar pesanan, profit, tracking order, dan login admin (static demo).">
   <style>
     :root{
-      --bg:#0f1724; --card:#111827; --muted:#9ca3af; --accent:#f97316; --accent-2:#fb923c; --glass: rgba(255,255,255,0.03);
-      --success:#10b981; --danger:#ef4444; --surface:#0b1220; --white:#fff;
+      --bg: #0f1724; --card: #111827; --muted: #9ca3af; --accent: #f97316; --accent-2: #fb923c; --glass: rgba(255,255,255,0.03);
+      --success: #10b981; --danger: #ef4444; --surface: #0b1220; --white: #fff;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     }
     *{box-sizing:border-box}
-    body{margin:0;background:linear-gradient(180deg,#071024 0%, #071821 50%);color:var(--white);min-height:100vh}
+    body{margin:0;background:linear-gradient(180deg, #071024 0%, #071821 50%);color:var(--white);min-height:100vh}
 
     /* Layout */
     .app{display:grid;grid-template-columns:260px 1fr;gap:24px;padding:28px}
